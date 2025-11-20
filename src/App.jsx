@@ -7,7 +7,7 @@ import SideMenu from './components/sidemenu.jsx';
 import BoardHeader from './components/BoardHeader.jsx';
 import CalendarView from './components/CalendarView.jsx';
 import SettingsView from './components/SettingsView.jsx';
-import TableView from './components/tableview.jsx';
+import TableView from '.components/Tableview.jsx';
 
 
 const MainContentPlaceholder = ({ menuItem }) => {
