@@ -105,6 +105,8 @@ body {
   flex-direction: column;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  overflow-y: auto;
+  
 }
 
 .menu-brand {
@@ -265,7 +267,8 @@ body {
 
 .project-details {
   position: relative;
-  z-index: 2; 
+  z-index: 2;
+  flex-grow: 1; 
 }
 
 .project-title h1 {
@@ -300,6 +303,7 @@ body {
   align-items: center;
   margin-top: 15px;
   opacity: 1; 
+  justify-content: space-between;
 }
 
 
@@ -831,7 +835,7 @@ input:checked + .slider:before {
     color: #495057;
     cursor: pointer;
     padding: 0;
-    margin-right: auto; 
+    flex-shrink: 0;
 }
 
 /* Dark Mode adjustment for the button */
@@ -858,8 +862,7 @@ input:checked + .slider:before {
   .side-menu {
     width: 200px; 
   }
-
-  /* Kanban: Change to 2 columns */
+  
   .column {
     flex: 0 0 calc(50% - 15px); 
     min-width: 300px; 
@@ -882,7 +885,7 @@ input:checked + .slider:before {
 
 /* Mobile/Small Tablet Layout (max-width: 768px) */
 @media (max-width: 768px) {
-  .side-menu {
+ .side-menu {
     width: 280px; 
     position: fixed;
     height: 100vh;
@@ -902,68 +905,33 @@ input:checked + .slider:before {
   .menu-toggle-button {
       display: block; 
   }
-  
-  #root {
-    display: flex; 
-  }
-  
- .header-top-bar {
-  padding: 10px; 
-  flex-wrap: wrap;
-}
-  
-  .header-main-section {
-    padding: 15px;
-  }
-  
-  .project-info-row {
-    flex-direction: column; 
-    align-items: flex-start;
-  }
-  
-  .project-icon {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-  
-  .board-utility-bar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
-    padding: 15px;
-  }
 
-  .kanban-tabs {
-    justify-content: space-around; 
-    width: 100%;
-    gap: 0;
-    border-bottom: 1px solid #eee; 
-    padding-bottom: 10px;
-  }
-  
-  .utility-actions {
-    width: 100%;
-    justify-content: space-between; 
+  .project-info-row {
+    align-items: flex-start;
     flex-wrap: wrap;
   }
-  
-  .search-input-container {
-    width: 100%; 
-    margin-bottom: 10px;
+
+  .project-icon {
+    margin-right: 15px;
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
 
-
-  .board.kanban-view {
-    padding: 15px;
-    flex-direction: column; 
-    gap: 15px;
+  .project-details {
+    flex-grow: 1; 
   }
-  
-  .column {
-    flex: 0 0 100%;
-    min-width: unset; 
+
+  .menu-toggle-button {
+    margin-left: auto;
+    align-self: center; 
+  }
+
+  .board-utility-bar {
+    padding: 15px; 
   }
 }
+
+
 
 /* Very Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
@@ -979,6 +947,31 @@ input:checked + .slider:before {
         width: 100%;
         justify-content: center;
         margin-left: 0 !important; 
+    }
+}
+
+
+/* Custom Mobile S (max-width: 320px) */
+@media (max-width: 320px) {
+    .board.kanban-view {
+        padding: 5px; 
+        gap: 10px; 
+    }
+    
+    .column {
+        padding: 8px; 
+    }
+    
+    .column-header {
+      padding: 5px; 
+    }
+
+    .card {
+        padding: 10px; 
+    }
+
+    .search-input-container {
+        padding: 4px 8px;
     }
 }
 

@@ -178,7 +178,7 @@ function App() {
         />
       );
     } 
-    
+
 
     if (viewMode === 'kanban') {
       return (
@@ -255,6 +255,8 @@ function App() {
         {renderContent()}
       </div>
     </>
+
+    
   );
 }
 

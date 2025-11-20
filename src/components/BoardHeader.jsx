@@ -12,11 +12,8 @@ const BoardHeader = ({ viewMode, setViewMode, onNewTaskClick, searchTerm, setSea
           <div className="project-title">
             <h1>Craftboard Project</h1>
           </div>
-          <p className="project-subtitle">Streamline HR  Operations with our Dynamic Dashboard Soluations.</p>
+          <p className="project-subtitle">Streamline HR Operations with our Dynamic Dashboard Soluations.</p>
         </div>
-      </div>
-    </div>
-    <div className="header-top-bar">
         <button 
           className="menu-toggle-button" 
           onClick={toggleMenu}
@@ -24,11 +21,11 @@ const BoardHeader = ({ viewMode, setViewMode, onNewTaskClick, searchTerm, setSea
         >
           <IoMenuOutline style={{ fontSize: '1.5em' }} />
         </button>
+      </div>
     </div>
-
-    <div className="header-main-section">
+    
+    <div className="header-top-bar">
     </div>
-
     <div className="board-utility-bar">
       <div className="kanban-tabs">
         <div 
@@ -51,7 +48,7 @@ const BoardHeader = ({ viewMode, setViewMode, onNewTaskClick, searchTerm, setSea
         </div>
         <div className="kanban-tab">Timeline</div>
       </div>
-    
+  
       <div className="utility-actions">
         <SearchInput 
           searchTerm={searchTerm} 
